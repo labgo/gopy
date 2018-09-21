@@ -1,0 +1,2 @@
+# gopy
+Go para Pythonistas
