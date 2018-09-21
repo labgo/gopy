@@ -13,11 +13,11 @@ func main() {
 		fmt.Println("Informe o código do país. Ex: BR ou br")
 		os.Exit(0)
 	}
-	codigos := []string{}
+	indicadores := []string{}
 	for _, c := range strings.ToUpper(os.Args[1]) {
-		indicador := rune(c - 'A' + indicadorA)
-		codigos = append(codigos, string(indicador))
+		código := rune(c - 'A' + indicadorA)
+		indicadores = append(indicadores, string(código))
 	}
 	// terminal do Ubuntu 18.04 ainda não reconhece REGIONAL INDICATORs..
-	fmt.Println(strings.Join(codigos, ""))
+	fmt.Println(strings.Join(indicadores, ""))
 }

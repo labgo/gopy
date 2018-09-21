@@ -11,13 +11,13 @@ def main():
         print('Informe o código do país. Ex: BR ou br')
         sys.exit()
 
-    codigos = []
+    indicadores = []
     for c in sys.argv[1].upper():
-        indicador = ord(c) - ord('A') + INDICADOR_A
-        codigos.append(chr(indicador))
+        código = ord(c) - ord('A') + INDICADOR_A
+        indicadores.append(chr(código))
 
     # terminal do Ubuntu 18.04 ainda não reconhece REGIONAL INDICATORs...
-    print(''.join(codigos))
+    print(''.join(indicadores))
 
 if __name__ == '__main__':
     main()
