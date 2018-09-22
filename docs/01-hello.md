@@ -67,5 +67,22 @@ import (
 > 🔍 As ferramentas `go fmt` e `goimports` ajudam a organizar os imports, mas elas têm comportamentos distintos, como explicado nesse [issue](https://github.com/golang/go/issues/8963).
 
 
+## Como executar um programa
 
+- Go playground
+- `go run`
+- `go build`
+
+## Ferramentas
+
+- gocode
+- gopkgs
+- go-symbols
+- guru
+- gorename
+- dlv
+- godef
+- godoc
+- goreturns
+- golint
 
