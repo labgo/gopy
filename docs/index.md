@@ -49,7 +49,7 @@ Para ganhar tempo na apresentação da linguagem Go, vamos assumir que as pessoa
 
 1. [Olá, 🌎!](01-hello)
 2. [Estruturas de controle básicas](02-controle)
-3. [Tipos nativos](03-nativos)
+3. [Tipos básicos](03-basicos)
 
 ## Proposta didática
 
