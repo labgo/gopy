@@ -61,4 +61,23 @@ complex128  número complexo com partes real e imaginária float64
 
 ## Strings
 
-Tipo `string` define uma sequência imutável de bytes normalmente usada para armazenar texto Unicode codificado como UTF-8. Ela se parece com o tipo `str` de Python 2 (diferente do tipo `str` de Python 3). `len(s)` devolve o número de bytes, e não o número de caracteres. Para obter o número de caracteres, use `utf8.RuneCountInString(s)`. Para iterar caractere a caractere, use `for...range`.
+Tipo `string` define uma sequência imutável de bytes normalmente usada para armazenar texto Unicode codificado como UTF-8. O tipo `string` de Go se parece com o tipo `str` de Python 2 (diferente do tipo `str` de Python 3):
+
+- `len(s)` devolve o número de bytes, e não o número de caracteres. Para obter o número de caracteres, use `utf8.RuneCountInString(s)`.
+- Para iterar caractere a caractere, use `for...range`.
+
+```go
+package main
+
+import (
+	"fmt"
+	"utf8"
+)
+
+func main() {
+	ss := []string{"bola", "café", "世界", "🌎"} 
+	for _, s := range(ss) {
+		fmt.Println("%s %d %d %t", s, len(s), utf8.RuneCountInString(s), []runne(s))
+	}
+}
+```
