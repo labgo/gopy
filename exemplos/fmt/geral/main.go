@@ -48,7 +48,7 @@ func intVerbsAlternate() {
 		74, byte(75), 'L',
 	}
 	w := tabwriter.NewWriter(os.Stdout, 0, 0, 0, ' ', 0)
-	formato := "%T \t│ %#v \t│ %#o \t│ %#q \t│ %#x \t│ %#X \t│ %#U\n"
+	formato := "%T \t│ %#v \t│ %#o \t│ %#x \t│ %#X \t│ %#q \t│ %#U\n"
 	fmt.Fprint(w, formato)
 	for _, v := range values {
 		fmt.Fprintf(w, formato, v, v, v, v, v, v, v)

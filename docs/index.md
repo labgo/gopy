@@ -48,8 +48,9 @@ Para ganhar tempo na apresentação da linguagem Go, vamos assumir que as pessoa
 ## Conteúdo
 
 1. [Olá, 🌎!](01-hello)
-2. [Estruturas de controle básicas](02-controle)
-3. [Tipos básicos](03-basicos)
+1. [Sintaxe básica](02-sintaxe-basica)
+1. [Estruturas de controle básicas](99-controle)
+1. [Tipos básicos](03-basicos)
 
 ## Proposta didática
 

@@ -9,6 +9,54 @@ permalink: 01-hello
 Todo arquivo-fonte em Go deve ser salvo na codificação UTF-8. Isso permite usar caracteres Unicode em qualquer lugar que a sintaxe permita: strings, comentários e identificadores.
 
 ```go
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("Olá, 🌎!")
+```
+
+## Como executar um programa em Go
+
+### Go playground
+
+Visite https://play.golang.org/. Copie e cole o código e use os botões na página.
+
+### Go run
+
+Vá até o diretório `…/gopy/exemplos/hello/` e execute o seguinte comando:
+
+```bash
+$ go run ola.go
+Olá, 🌎!
+```
+
+Isso compila o programa em um diretório temporário, e o executa. Nenhum arquivo é gerado no diretório atual.
+
+### Go build
+
+O comando `go build` compila o programa e gera um binário executável. Por padrão, o executável tem o mesmo nome do diretório onde está o programa:
+
+```bash
+$ go build
+$ ls
+hello  ola.go
+$ ./hello
+Olá, 🌎!
+```
+
+Este executável não depende de mais nada para rodar *(stand-alone executable)*. Por padrão, as dependências externas são incorporadas ao binário *(statically linked binary)*.
+
+### Use a sua IDE
+
+Qualquer IDE corretamente configurada deve ser capaz de executar o programa e mostrar a saída em uma área de mensagens.
+
+No VS Code, a tecla `[F5]` roda o programa, se o depurador [`delve`](https://github.com/derekparker/delve) estiver instalado.
+
+## Olá, linha por linha
+
+```go
 package main  // ➊
 
 import "fmt"  // ➋
@@ -18,7 +66,7 @@ func main() {  // ➌
 }
 ```
 
-➊ Todo arquivo-fonte em Go precisa declarar o pacote ao qual ele pertence. 
+➊ Declaração do nome do pacote.
 
 ➋ Importamos o pacote `fmt` da biblioteca padrão.
 
@@ -65,24 +113,3 @@ import (
 - Opcionalmente, divida os pacotes em grupos separados por uma linha: biblioteca padrão, meus pacotes, etc. Dentro de cada grupo, respeite a ordem alfabética.
 
 > 🔍 As ferramentas `go fmt` e `goimports` ajudam a organizar os imports, mas elas têm comportamentos distintos, como explicado nesse [issue](https://github.com/golang/go/issues/8963).
-
-
-## Como executar um programa
-
-- Go playground
-- `go run`
-- `go build`
-
-## Ferramentas
-
-- gocode
-- gopkgs
-- go-symbols
-- guru
-- gorename
-- dlv
-- godef
-- godoc
-- goreturns
-- golint
-
