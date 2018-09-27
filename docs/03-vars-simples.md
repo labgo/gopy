@@ -152,7 +152,7 @@ Tipo `string` define uma sequência imutável de bytes normalmente usada para ar
 func main() {
 	ss := []string{"bola", "café", "世界", "🌎"} 
 	for _, s := range(ss) {
-		fmt.Println("%s %d %d %t", s, len(s), 
+		fmt.Printf("%s %d %d %t", s, len(s), 
 			utf8.RuneCountInString(s), []rune(s))
 	}
 }
