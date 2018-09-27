@@ -18,6 +18,7 @@ func generalVerbs() {
 		[]int{1, 2, 3},
 		[]string{"A", "B", "C"},
 		[2]float64{10, 20},
+		3 + 5i,
 		map[string]int{"um": 1, "dois": 2},
 		Cidade{"São Paulo", 23.55, 46.63},
 	}

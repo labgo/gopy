@@ -36,7 +36,7 @@ func main() {
 
 No exemplo acima, a variável nome só existe no bloco do laço `for`.
 
-> 🏋 **Exercício:** complete o programa acima, faça ele rodar e observe a saída. Alguma surpresa?
+> 🏋 **Exercício:** complete o programa acima, faça ele rodar e observe a saída. Alguma surpresa? Comente com a pessoa ao seu lado. Qualquer dúvida, pergunte para as pessoas que estão facilitando a oficina.
 
 ## Declaração curta
 
@@ -117,6 +117,27 @@ float64     número IEEE-754 de 64 bits
 complex64   número complexo com partes real e imaginária float32
 complex128  número complexo com partes real e imaginária float64
 ```
+
+| tipo    | literal | exemplo de atribuição curta |
+| ------- | ------- | ----------------------------|
+| float64 | 3.141592653589793 | a := 3.14159265358979323846264338327950288 |
+| float32 | 3.1415927 | b := float32(3.14159265358979323846264338327950288) |
+| float64 | -3.141592653589793 | c := a - 2*a |
+| complex64 | (3.1415927-6.2831855i) | d := complex(b, -2*b) |
+| complex128 | (3.1415927410125732-6.2831854820251465i) | e := complex128(d) |
+
+> 🔍 Observe que os tipos default são `float64` e `complex128` na declaração curta com valor literal.
+
+
+#### Funções embutidas para `complex`
+
+```go
+func complex(r, i FloatType) ComplexType  // construtor
+func imag(c ComplexType) FloatType  // devolve parte imaginária
+func real(c ComplexType) FloatType  // devolve parte real
+```
+
+> 📖 `ComplexType` is here for the purposes of documentation only. It is a stand-in for either complex type: `complex64` or `complex128`. [Package builtin→ComplexType](https://golang.org/pkg/builtin/#ComplexType) 
 
 ### Strings
 
