@@ -33,10 +33,10 @@ A sintaxe de bloco `/* */` é mais usada para omitir temporariamente um trecho, 
 
 A ferramenta `godoc` gera documentação a partir de comentários escritos no topo de um arquivo-fonte, ou imediatamente antes de uma declaração de função, tipo, constante, ou variável global. Tais comentários não são incorporados ao programa compilado, como ocorre com as *docstrings* de Python.
 
-Veja [
+> 📖 Veja [
 Godoc: documenting Go code](https://blog.golang.org/godoc-documenting-go-code) para saber mais.
 
-Veja [Package testing→Overview→Examples](https://golang.org/pkg/testing/#hdr-Examples) para conhecer o uso de comentários em testes com exemplos, similar aos *doctests* de Python.
+> 📖 Veja [Package testing→Overview→Examples](https://golang.org/pkg/testing/#hdr-Examples) para conhecer o uso de comentários em testes com exemplos, similar aos *doctests* de Python.
 
 
 ## Inserção automática de `;`
@@ -63,7 +63,7 @@ x
 
 No primeiro caso, o parser sabe que a expressão precisa continuar. No segundo caso, não há como adivinhar a continuação.
 
-Veja [Effective Go→Semicolons](https://golang.org/doc/effective_go.html#semicolons) para saber mais.
+> 📖 Veja [Effective Go→Semicolons](https://golang.org/doc/effective_go.html#semicolons) para saber mais.
 
 
 ## Estilo
@@ -77,13 +77,10 @@ Questões de estilo de mais alto nível são tratadas no documento oficial [*Eff
 
 Qualquer caractere Unicode considerado uma *letra* pode ser usado para formar identificadores. Isso inclui letras acentuadas, letras gregas, ideogramas chineses etc. Além de letras, o `_` pode ser usado. Isoladamente, ele tem um significado especial em alguns contextos. Depois de uma ou mais letras, dígitos de 0 a 9 também podem ser usados.
 
-Veja [Effective Go→Names](https://golang.org/doc/effective_go.html#names) para saber mais.
+> 📖 Veja [Effective Go→Names](https://golang.org/doc/effective_go.html#names) para saber mais.
 
 ### Caixa alta e baixa: Público e privado
 
 Para identificadores com várias palavras, Go usa *camelCase*  e não *snake_case* como Python.
 
 Se o identificador é o nome de uma declaração de primeiro nível (`type`, `func`, `var`, `const`), ou o nome de um campo em um `struct`, a primeira letra deve ser maiúscula para indicar que este nome é público e pode ser acessado via `import` em outros pacotes. Se a primeira letra for minúscula, o nome é privado e não pode ser acessado por outros pacotes.
-
-
-
