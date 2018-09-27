@@ -122,7 +122,7 @@ complex128  número complexo com partes real e imaginária float64
 | ------- | ------- | ----------------------------|
 | float64 | 3.141592653589793 | a := 3.14159265358979323846264338327950288 |
 | float32 | 3.1415927 | b := float32(3.14159265358979323846264338327950288) |
-| float64 | -3.141592653589793 | c := a - 2*a |
+| float64 | -3.141592653589793 | c := a - 2i*a |
 | complex64 | (3.1415927-6.2831855i) | d := complex(b, -2*b) |
 | complex128 | (3.1415927410125732-6.2831854820251465i) | e := complex128(d) |
 
@@ -150,10 +150,14 @@ Tipo `string` define uma sequência imutável de bytes normalmente usada para ar
 
 ```go
 func main() {
-	ss := []string{"bola", "café", "世界", "🌎"} 
-	for _, s := range(ss) {
-		fmt.Println("%s %d %d %t", s, len(s), 
+	fmt.Printf("s\tlen(s)\tcount\trunes\n")
+	fmt.Printf("────\t──────\t─────\t───────────────────────────────\n")
+
+	ss := []string{"cafe", "café", "café", "世界", "🌎", "🖖🏿"}
+	for _, s := range ss {
+		fmt.Printf("%s\t%5d\t%5d\t%#v\n", s, len(s),
 			utf8.RuneCountInString(s), []rune(s))
 	}
 }
+
 ```
