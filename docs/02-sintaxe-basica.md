@@ -68,7 +68,7 @@ Veja [Effective Go→Semicolons](https://golang.org/doc/effective_go.html#semico
 
 ## Estilo
 
-Não existe o equivalente do PEP-8 no nível da sintaxe. Em vez disso o comando `go fmt` e o utititário `gofmt` são **fortemente** recomendados para arrumar seu código antes de um commit. Uma IDE bem configurada deve rodar `gofmt` no arquivo-fonte toda vez que ele é salvo. Não discuta, apenas faça assim e seja feliz.
+Não existe o equivalente do PEP-8 no nível da sintaxe. Em vez disso o comando `go fmt` e o utilitário `gofmt` são **fortemente** recomendados para arrumar seu código antes de um commit. Uma IDE bem configurada deve rodar `gofmt` no arquivo-fonte toda vez que ele é salvo. Não discuta, apenas faça assim e seja feliz.
 
 Questões de estilo de mais alto nível são tratadas no documento oficial [*Effective Go*](https://golang.org/doc/effective_go.html). Além de tratar brevemente de formatação, *Effective Go*  discute a programação idiomática de Go para produzir código mais fácil de entender, menos sujeito a erros, e com melhor desempenho.
 

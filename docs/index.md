@@ -49,6 +49,7 @@ Para ganhar tempo na apresentação da linguagem Go, vamos assumir que as pessoa
 
 1. [Olá, 🌎!](01-hello)
 1. [Sintaxe básica](02-sintaxe-basica)
+1. [Variáveis e tipos simples](03-vars-simples)
 1. [Estruturas de controle básicas](99-controle)
 1. [Tipos básicos](03-basicos)
 
