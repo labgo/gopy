@@ -17,6 +17,7 @@ func main() {
 		v interface{}
 	)
 	for i, v = range valores {
-		fmt.Printf("var %c %-13T = %#[2]v\n", nomes[i], v)
+		var nome = nomes[i]
+		fmt.Printf("var %c %-13T = %#[2]v\n", nome, v)
 	}
 }

@@ -28,12 +28,15 @@ func main() {
 		v interface{}
 	)
 	for i, v = range valores {
-		fmt.Printf("var %c %-13T = %#[2]v\n", nomes[i], v)
+		var nome = nomes[i]
+		fmt.Printf("var %c %-13T = %#[2]v\n", nome, v)
 	}
 }
 ```
 
-Exercício: complete o programa acima, faça ele rodar e observe a saída. Alguma surpresa?
+No exemplo acima, a variável nome só existe no bloco do laço `for`.
+
+> 🏋 **Exercício:** complete o programa acima, faça ele rodar e observe a saída. Alguma surpresa?
 
 ## Declaração curta
 
@@ -47,16 +50,16 @@ func main() {
 	b, c := int16(2), 'C'
 	d, e := os.Open("arquivo.x")
 	f := 1.6
-	g := nil
 	nomes := "abcdefg"
 	valores := []interface{}{a, b, c, d, e, f}
 	for i, v := range valores {
-		fmt.Printf("%c := %#v  // %[2]T\n", nomes[i], v)
+		nome := nomes[i]
+		fmt.Printf("%c := %#v  // %[2]T\n", nome, v)
 	}
 }
 ```
 
-No exemplo acima, as variáveis `i` e `v` só existem dentro do bloco do laço `for`.
+No exemplo acima, as variáveis `i`, `v` e `nome` só existem dentro do bloco do laço `for`.
 
 ## Tipos simples
 
@@ -70,7 +73,7 @@ Constantes: `true`, `false` (inicial minúscula).
 
 #### Inteiros com sinal
 
-> Quando precisar de um valor inteiro deverá usar `int`, a menos que tenha um motivo específico para usar um tipo de inteiro com tamanho especificado ou sem sinal. *[Tour, Tipos Básicos](https://go-tour-br.appspot.com/basics/11)*
+> 🔍 Use `int` quando precisar de um valor inteiro, a menos que tenha um motivo específico para usar um tipo de inteiro com tamanho especificado ou sem sinal. *[Tour, Tipos Básicos](https://go-tour-br.appspot.com/basics/11)*
 
 
 ```go
@@ -84,12 +87,12 @@ rune   // sinônimo de int32, para código de caractere Unicode
 
 `rune` não é um tipo distinto de `int32`, é apenas um *alias* (apelido).
 
->  Conversions are required when different numeric types are mixed in an expression or assignment. For instance,  `int32` and `int` are not the same type even though they may have the same size on a particular architecture. *[The Go Programming Language Specification, Numeric types](https://golang.org/ref/spec#Numeric_types)*
+> 📖 Conversions are required when different numeric types are mixed in an expression or assignment. For instance,  `int32` and `int` are not the same type even though they may have the same size on a particular architecture. *[The Go Programming Language Specification, Numeric types](https://golang.org/ref/spec#Numeric_types)*
 
 
 #### Inteiros sem sinal
 
-> [...] números sem sinal tendem a ser usados somente quando operadores bit a bit ou operações aritméticas peculiares forem necessárioa, por exemplo, quando implementamos conjuntos de bits (bitsets), fazemos parse de formatos de arquivos binários ou para hashing e criptografia. Normalmente, eles não são usados em casos que sejam apenas de quantidades não negativas. *GOPL, 3.1 Inteiros*
+> 📖 [...] números sem sinal tendem a ser usados somente quando operadores bit a bit ou operações aritméticas peculiares forem necessárioa, por exemplo, quando implementamos conjuntos de bits (bitsets), fazemos parse de formatos de arquivos binários ou para hashing e criptografia. Normalmente, eles não são usados em casos que sejam apenas de quantidades não negativas. *GOPL, 3.1 Inteiros*
 
 ```go
 uint8   // inteiro de  8 bits (0 a 255)
@@ -122,18 +125,13 @@ Tipo `string` define uma sequência imutável de bytes normalmente usada para ar
 - `len(s)` devolve o número de bytes, e não o número de caracteres. Para obter o número de caracteres, use `utf8.RuneCountInString(s)`.
 - Para iterar caractere a caractere, use `for...range`.
 
+> 🏋 **Exercício:** complete o programa abaixo, faça ele rodar e observe a saída. Ficou claro o resultado? Se não ficou, pergunte para a pessoa ao seu lado. Se ela não sabe, pergunte para as pessoas que estão facilitando a oficina.
+
 ```go
-package main
-
-import (
-	"fmt"
-	"utf8"
-)
-
 func main() {
 	ss := []string{"bola", "café", "世界", "🌎"} 
 	for _, s := range(ss) {
-		fmt.Println("%s %d %d %t", s, len(s), utf8.RuneCountInString(s), []runne(s))
+		fmt.Println("%s %d %d %t", s, len(s), utf8.RuneCountInString(s), []rune(s))
 	}
 }
 ```

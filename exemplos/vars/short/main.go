@@ -13,6 +13,7 @@ func main() {
 	nomes := "abcdefg"
 	valores := []interface{}{a, b, c, d, e, f}
 	for i, v := range valores {
-		fmt.Printf("%c := %#v  // %[2]T\n", nomes[i], v)
+		nome := nomes[i]
+		fmt.Printf("%c := %#v  // %[2]T\n", nome, v)
 	}
 }
